@@ -164,6 +164,17 @@ SECTIONS
         KEEP(*(.reset*))
         KEEP(*(.after_vectors))
     } > VECTOR_REGION
+
+    .image_hdr : {
+        . = ALIGN(4);
+        __img_hdr_START = .;
+        LONG(0xAA55FADE)
+        LONG(0x55AAC0DE)
+        LONG(0)
+        LONG(0)
+        __img_hdr_END = .;
+    } > CODE_REGION
+
     /*
      * Code Sections - Note that standard input sections such as
      * *(.text), *(.text.*), *(.rodata), & *(.rodata.*)
