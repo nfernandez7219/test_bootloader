@@ -58,6 +58,7 @@
 #include "peripheral/cmcc/plib_cmcc.h"
 #include "FreeRTOS.h"
 #include "task.h"
+#include "system/cache/sys_cache.h"
 #include "app_test.h"
 
 

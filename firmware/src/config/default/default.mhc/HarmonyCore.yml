@@ -30,6 +30,28 @@ children:
         attributes: {id: name}
         children:
         - {type: Value, value: app_test.h}
+  - type: KeyValueSet
+    attributes: {id: COMMON_SYMBOL_CNTR}
+    children:
+    - type: Attributes
+      children:
+      - type: KeyValuePairList
+        attributes: {id: pairs}
+        children:
+        - type: Pairs
+          children:
+          - type: Pair
+            attributes: {description: 'TRUE', value: '0', key: ENABLE_DRV_COMMON}
+          - type: Pair
+            attributes: {description: 'TRUE', value: '0', key: ENABLE_SYS_COMMON}
+          - type: Pair
+            attributes: {description: 'FALSE', value: '0', key: ENABLE_SYS_MEDIA}
+          - type: Pair
+            attributes: {description: 'FALSE', value: '0', key: ENABLE_SYS_PORTS}
+          - type: Pair
+            attributes: {description: 'FALSE', value: '0', key: ENABLE_SYS_DMA}
+          - type: Pair
+            attributes: {description: 'FALSE', value: '0', key: ENABLE_SYS_RESET}
   - type: File
     attributes: {id: CONFIGURATION_H}
     children:
@@ -48,6 +70,41 @@ children:
         attributes: {id: HarmonyCore, value: 'false'}
       - type: User
         attributes: {value: 'true'}
+  - type: Boolean
+    attributes: {id: ENABLE_DRV_COMMON}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: HarmonyCore, value: 'false'}
+  - type: Boolean
+    attributes: {id: ENABLE_OSAL}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: HarmonyCore, value: 'false'}
+  - type: Boolean
+    attributes: {id: ENABLE_SYS_CACHE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: HarmonyCore, value: 'true'}
+  - type: Boolean
+    attributes: {id: ENABLE_SYS_COMMON}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: HarmonyCore, value: 'false'}
+  - type: Boolean
+    attributes: {id: ENABLE_SYS_INT}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: HarmonyCore, value: 'false'}
   - type: Menu
     attributes: {id: GEN_APP_RTOS_TASK_CONF_MENU0}
     children:
@@ -98,6 +155,33 @@ children:
       children:
       - type: Dynamic
         attributes: {id: HarmonyCore, value: FreeRTOS}
+  - type: File
+    attributes: {id: SYS_CACHE_DEF}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: enabled}
+        children:
+        - {type: Value, value: 'true'}
+  - type: File
+    attributes: {id: SYS_CACHE_HEADER}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: enabled}
+        children:
+        - {type: Value, value: 'true'}
+  - type: File
+    attributes: {id: SYS_CACHE_SOURCE}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: enabled}
+        children:
+        - {type: Value, value: 'true'}
   - type: File
     attributes: {id: TASKS_C}
     children:

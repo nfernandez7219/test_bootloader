@@ -48,13 +48,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 972E955D94A63BA89BF6ABD6AADB1023
-- generatedChecksum: 7E9FD9E7B0E4100C23E735B9399B8831
+- generatedChecksum: A64B9C12C0804AE8D5918E290FC5F893
   logicalPath: config/default
   name: initialization.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 7E9FD9E7B0E4100C23E735B9399B8831
+  userChecksum: 5629886967428DFDB05FC4BED40BE710
 - generatedChecksum: 704B63D1ABDAF9DC4E564FCEBCE16AD9
   logicalPath: config/default
   name: interrupts.c
@@ -118,13 +118,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 903E0413B53BA9E8980C740E65F59966
-- generatedChecksum: A4F2D8F7C62E8B54C8DCA2533617423F
+- generatedChecksum: AE8080071822FDAC229A5D6504FC1751
   logicalPath: config/default/peripheral/port
   name: plib_port.c
   physicalPath: peripheral/port
   security: NON_SECURE
   type: SOURCE
-  userChecksum: A4F2D8F7C62E8B54C8DCA2533617423F
+  userChecksum: AE8080071822FDAC229A5D6504FC1751
 - generatedChecksum: 12667A7A89D4581C16CFEA249D4D086E
   logicalPath: config/default/peripheral/sercom/usart
   name: plib_sercom0_usart.c
@@ -160,6 +160,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: D6CF30BDCE1A813D9ACF3905EBD6A871
+- generatedChecksum: 92901E4C07604DD5EC594B58CEC2720B
+  logicalPath: config/default/system/cache
+  name: sys_cache.c
+  physicalPath: system/cache
+  security: NON_SECURE
+  type: SOURCE
+  userChecksum: 92901E4C07604DD5EC594B58CEC2720B
 - generatedChecksum: EAE5F758502F9D97CBDD80C5B366CB03
   logicalPath: config/default
   name: tasks.c
@@ -391,13 +398,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 65513601965E1BADD5659DCE674BE9AD
-- generatedChecksum: 3A92A08BB18DC7910A6021C1066B198D
+- generatedChecksum: 293CF1BF6F316002E246258C25A0F9CD
   logicalPath: config/default
   name: definitions.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 3A92A08BB18DC7910A6021C1066B198D
+  userChecksum: 293CF1BF6F316002E246258C25A0F9CD
 - generatedChecksum: 1EA4EDD5EA90F43EC407DE32441159A9
   logicalPath: FreeRTOS/Source/include
   name: deprecated_definitions.h
@@ -748,13 +755,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 265847151EACC813B7C7825442C21A32
-- generatedChecksum: D7B564ACC50426336FB832D7770F4222
+- generatedChecksum: 9E6D346786315D5CFFB7A40D7271269E
   logicalPath: config/default/peripheral/port
   name: plib_port.h
   physicalPath: peripheral/port
   security: NON_SECURE
   type: HEADER
-  userChecksum: D7B564ACC50426336FB832D7770F4222
+  userChecksum: 9E6D346786315D5CFFB7A40D7271269E
 - generatedChecksum: 9E847139EB4A35248CEAA3CF830D18DD
   logicalPath: config/default/peripheral/sercom/usart
   name: plib_sercom0_usart.h
@@ -1014,6 +1021,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 7C44196FFB4D3845F4CD57295D3C7B5D
+- generatedChecksum: AFAAF7D896D57569CA4CF73BB3339481
+  logicalPath: config/default/system/cache
+  name: sys_cache.h
+  physicalPath: system/cache
+  security: NON_SECURE
+  type: HEADER
+  userChecksum: AFAAF7D896D57569CA4CF73BB3339481
 - generatedChecksum: 84B3224817BDD8B37961BB3B3441E134
   logicalPath: FreeRTOS/Source/include
   name: task.h
@@ -1195,7 +1209,7 @@ files:
   physicalPath: ''
   security: NON_SECURE
   type: LINKER
-  userChecksum: 4B08166850609F8EE7BEEA5932408C5F
+  userChecksum: A76BDD92BFB057F56DF9E061AF5EABCE
 format_version: v1.0
 libraries: []
 settings:
@@ -1222,7 +1236,7 @@ settings:
   delimiter: ''
   key: heap-size
   security: NON_SECURE
-  value: '512'
+  value: '1024'
 - append: false
   category: C32-LD
   delimiter: ''
@@ -1235,12 +1249,6 @@ settings:
   key: preprocessor-macros
   security: NON_SECURE
   value: ''
-- append: true
-  category: C32-LD
-  delimiter: ;=
-  key: preprocessor-macros
-  security: NON_SECURE
-  value: ROM_ORIGIN=0x2000;ROM_LENGTH=0xfe000
 - append: true
   category: C32CPP
   delimiter: ;

@@ -129,11 +129,10 @@ void APP_TEST_Tasks ( void )
             }
             
             /* try printing some text to the serial line... */
-            printf("\n\rThe test application running from NVM Flash BANK %s\n\r", bank_a ? "A" : "B");
+            printf("\n\rThe test application running from NVM Flash BANK %s\n\r", bank_a ? "A": "B");
             
             if (appInitialized)
             {
-
                 app_testData.state = APP_TEST_STATE_SERVICE_TASKS;
             }
             break;
